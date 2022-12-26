@@ -1,0 +1,6 @@
+<launch>
+<!--<node pkg="tf" type="static_transform_publisher" name=“lidar_tf_broadcaster" args=“0.1 0 0.2 0 0 0 base_link base_laser 10" />-->
+<node pkg="lidar_detect" type="lidar_detect_node" name="lidar_detect_node" output = "screen"/>
+<node pkg="rviz" type="rviz" name="rviz" args="-d $(find lidar_detect)/rviz/lidar_tf.rviz" />
+</launch>
+
